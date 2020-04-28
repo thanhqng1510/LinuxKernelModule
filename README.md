@@ -26,15 +26,15 @@
 
 ### Hướng dẫn sử dụng module:
 
-1. Cách 1: sử dụng lệnh make all
-- Mở terminal và cd vào thư mục chứa source code.
+**1. Cách 1: sử dụng lệnh make all**
+- Mở terminal và `cd` vào thư mục chứa source code.
 - Chạy lệnh `make all`.
 - Cài đặt module bằng lệnh `sudo insmod Random.ko`.
 - Xem số ngẫu nhiên được sinh ra bằng lệnh `sudo cat /dev/Random`.
 - Gỡ cài đặt module bằng lệnh `sudo rmmod Random`.
 - Chạy lệnh `dmesg` để xem các bước thực hiện của module.
 
-2. Cách 2: sử dụng lệnh make auto
-- Mở terminal và cd vào thư mục chứa source code.
+**2. Cách 2: sử dụng lệnh make auto**
+- Mở terminal và `cd` vào thư mục chứa source code.
 - Chạy lệnh `make auto` để thực hiện tự động toàn bộ các bước bên trên.
 - Chạy lệnh `dmesg` để xem các bước thực hiện của module.
