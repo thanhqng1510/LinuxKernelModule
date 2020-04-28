@@ -4,7 +4,7 @@
 
 - Nguyễn Quý Thanh - 18127210.
 - Nguyễn Thị Tâm Phúc - 18127182.
-- Nguyễn Phạm Thanh Vy - 1812****.
+- Nguyễn Phạm Thanh Vy - 18127258 (đang nằm viện - đã xin phép).
 
 ### Yêu cầu:
 
