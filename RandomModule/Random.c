@@ -6,7 +6,7 @@
 
 
 #define VERSION "0.1"
-#define AUTHOR "Quy Thanh - Tam Phuc <thanhqng1510@gmail.com>"
+#define AUTHOR "Quy Thanh - Tam Phuc - Thanh Vy"
 #define DESCRIPTION "A module to create a random number"
 #define MOD_NAME "Random"
 #define CLASS_NAME "CRandom"
