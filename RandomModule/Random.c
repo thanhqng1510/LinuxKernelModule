@@ -3,6 +3,7 @@
 #include <linux/device.h>
 #include <linux/cdev.h>
 #include <linux/uaccess.h>
+#include <random.h>
 
 
 #define VERSION "0.1"
@@ -38,10 +39,38 @@ static int Release(struct inode* inode, struct file* filp) {
 
 static ssize_t Read(struct file* filp, char __user* ubuff, size_t size, loff_t* off) {
 	printk("Entry point read is called\n");
-	/*
-	Add random number here
-	*/
-	return 0;
+	unsigned char rand;
+	char tmp[4] = { '\0' };
+	get_random_bytes(rand, sizeof(rand));
+	printk("Random number is %d\n", rand);
+	if (size < 4)
+	{
+		printk("\nFailed\n");
+		return -EFAULT;
+	}
+	if (rand != 0) {
+		i = 0;
+		while (rand != 0) {
+			tmp[i] = rand % 10 + '0';
+			rand = rand / 10;
+			i++;
+		}
+		tmp[i] = '\0';
+		ubuff[i] = '\0';
+		i--;
+		while (i >= 0)
+		{
+			*ubuff = tmp[i];
+			i--;
+			ubuff++;
+		}
+		return 0;
+	}
+	else {
+		*(ubuff++) = '0';
+		*ubuff = '\0';
+		return 0;
+	}
 }
 
 static ssize_t Write(struct file* filp, const char __user* ubuff, size_t size, loff_t* off) {
