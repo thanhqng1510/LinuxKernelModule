@@ -30,7 +30,7 @@
 - Mở terminal và `cd` vào thư mục chứa source code.
 - Chạy lệnh `make all`.
 - Cài đặt module bằng lệnh `sudo insmod Random.ko`.
-- Xem số ngẫu nhiên được sinh ra bằng lệnh `sudo ./test`.
+- Xem số ngẫu nhiên được sinh ra bằng lệnh `sudo ./random`.
 - Gỡ cài đặt module bằng lệnh `sudo rmmod Random`.
 - Chạy lệnh `dmesg` để xem các bước thực hiện của module.
 
