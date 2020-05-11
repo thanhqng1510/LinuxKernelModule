@@ -2,10 +2,14 @@ KDIR = /lib/modules/`uname -r`/build
 
 all:
 	make -C $(KDIR) M=`pwd`
+	make -C $(KDIR) M=$(PWD) modules
+	$(CC) test.c -o test
 auto:
 	make -C $(KDIR) M=`pwd`
 	sudo insmod Random.ko
-	sudo cat /dev/Random
+	make -C $(KDIR) M=$(PWD) modules
+	$(CC) test.c -o test
+	sudo ./test
 	sudo rmmod Random
 	make clean
 clean:
