@@ -3,7 +3,7 @@ KDIR = /lib/modules/`uname -r`/build
 all:
 	make -C $(KDIR) M=`pwd`
 	make -C $(KDIR) M=$(PWD) modules
-	$(CC) test.c -o test
+	$(CC) test.c -o random
 auto:
 	make -C $(KDIR) M=`pwd`
 	sudo insmod Random.ko
